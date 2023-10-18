@@ -1,7 +1,28 @@
-import { NavLink } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
+import Swal from 'sweetalert2'
 
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleSignOut = () => {
+        logOut()
+            .then(res => {
+                Swal.fire({
+                    title: 'Logout!',
+                    text: 'you have been logged out',
+                    icon: 'info',
+                    confirmButtonText: 'OK'
+                })
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
 
     const navLinks = <>
         <li><NavLink to={('/')}>Home</NavLink></li>
@@ -25,7 +46,7 @@ const Header = () => {
                         </ul>
                     </div>
                     <div className="w-12 rounded-full">
-                    <img className="rounded-full" src="https://i.ibb.co/pwYJkw4/logo.png" alt="" />
+                        <img className="rounded-full" src="https://i.ibb.co/pwYJkw4/logo.png" alt="" />
                     </div>
                     <a className="btn btn-ghost normal-case text-xl font-extrabold">Elysian Motorway</a>
                 </div>
@@ -34,8 +55,22 @@ const Header = () => {
                         {navLinks}
                     </ul>
                 </div>
+
+
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    {
+                        user ?
+                            <>
+                                <p>{user.displayName}</p>
+                                <img className="w-8 lg:w-10 md:mx-2 rounded-full" src={user.photoURL} alt="" />
+                                <button onClick={handleSignOut} className="btn bg-gray-200 capitalize">Logout</button>
+                            </>
+                            :
+                            <Link to="/login"><button className="btn btn-secondary btn-sm Lg:btn-md capitalize">Login</button></Link>
+                    }
+
+
+
                 </div>
             </div>
 
