@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2'
 
+
 const AddProduct = () => {
 
     const handleAddProduct = event => {
@@ -145,7 +146,7 @@ const AddProduct = () => {
 
                                 <input type="text" placeholder="rating"
                                     name="rating"
-                                    className="input input-bordered w-full" />
+                                    className="input input-bordered w-1/3" />
                             </label>
                         </div>
 

@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.ibb.co/vvSV051/BMW-X7a.jpg",
+        "image1": "https://i.ibb.co/tB1JWj5/BMW-2-Series.jpg",
+        "image2": "https://i.ibb.co/XbzhxCf/BMW-X3.jpg",
+        "image3": "https://i.ibb.co/DfQnvvB/BMW-5-Series.jpg",
+        "name": "x-7",
+        "brandName": "BMW",
+        "type": "SUV",
+        "price": "15000000",
+        "shortDes": "The first-ever BMW X7 is the elegant fusion of presence and personality",
+        "rating": 7
+    },
+    {
+        "id": 2,
+        "image": "https://i.ibb.co/mh2x8FR/Toyota-Highlander.jpg",
+        "image1": "https://i.ibb.co/7zhWgNN/Toyota-Prius.jpg",
+        "image2": "https://i.ibb.co/jJJXsSL/Toyota-Mirai.jpg",
+        "image3": "https://i.ibb.co/61sM86Y/Toyota-Sienna.jpg",
+        "name": "Highlander",
+        "brandName": "Toyota",
+        "type": "SUV",
+        "price": "1300000",
+        "shortDes": "With advanced capabilities and a confident drive, Highlander puts you...",
+        "rating": 8
+    },
+    {
+        "id": 3,
+        "image": "https://i.ibb.co/P4xgWd2/audi-q8-e-tron-suv.jpg",
+        "image1": "https://i.ibb.co/Wn8Shjh/Audi-A6.jpg",
+        "image2": "https://i.ibb.co/xDJ0X1h/Audi-Q7.jpg",
+        "image3": "https://i.ibb.co/mDQ60w7/Audi-Q8.jpg",
+        "name": "E-tron",
+        "brandName": "Audi",
+        "type": "SUV",
+        "price": "3000000",
+        "shortDes": "Welcome to your second home. Generous headroom and legroom ensure you...",
+        "rating": 9
+    },
+    {
+        "id": 4,
+        "image": "https://i.ibb.co/k96D1y1/ford-edge.jpg",
+        "image1": "https://i.ibb.co/p2J8hbw/Ford-Escape.jpg",
+        "image2": "https://i.ibb.co/7Sb6M2Y/Ford-Mustanh-Mach-E.jpg",
+        "image3": "https://i.ibb.co/pwKvLsQ/Ford-Expedition.jpg",
+        "name": "Edge",
+        "brandName": "Ford",
+        "type": "SUV",
+        "price": "3000000",
+        "shortDes": "Edge® delivers you, your passengers and all your stuff in style",
+        "rating": 8
+    },
+    {
+        "id": 5,
+        "image": "https://i.ibb.co/1KPd8LQ/Tesla-Model-S.jpg",
+        "image1": "https://i.ibb.co/12sHfX8/Tesla-3.jpg",
+        "image2": "https://i.ibb.co/4mLD7zP/Tesla-X.jpg",
+        "image3": "https://i.ibb.co/LpQ15v9/Tesla-Y.jpg",
+        "name": "Model S",
+        "brandName": "Tesla",
+        "type": "Sedan",
+        "price": "5000000",
+        "shortDes": "Model S Plaid has the quickest acceleration of any vehicle in production",
+        "rating": 7
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/7vf7Mrx/honda-prologue.jpg",
+        "image1": "https://i.ibb.co/ncpqPqQ/Honda-Civic.jpg",
+        "image2": "https://i.ibb.co/VJdkNxs/Honda-CRV.jpg",
+        "image3": "https://i.ibb.co/Vt6Xv9K/Honda-HR-V.jpg",
+        "name": "Prologue",
+        "brandName": "Honda",
+        "type": "SUV",
+        "price": "5500000",
+        "shortDes": "The all-electric 2024 Honda Prologue SUV delivers a sporty driving experience",
+        "rating": 8
+    }
+]
