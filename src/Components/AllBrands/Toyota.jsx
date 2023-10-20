@@ -35,74 +35,29 @@ const Toyota = () => {
             </div>
 
             <div>
+                {
+                    toyotas.map(toyota =>
 
-                <div className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
-                    <img className="mx-auto" src={toyotas[2].image} alt="" />
+                        <div key={toyota._id} className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
+                            <img className="mx-auto" src={toyota.image} alt="" />
 
-                    <div className="flex items-center justify-between mt-8">
-                        <div className="text-start ml-20 ">
-                            <h2 className="text-3xl">Name : {toyotas[2].name}</h2>
-                            <h2 className="text-xl">Type : {toyotas[2].type}</h2>
-                            <h2>Price : $ {toyotas[2].price}</h2>
-                            <p>Rating :  {toyotas[2].rating} / 10 </p>
+                            <div className="flex items-center justify-between mt-8">
+                                <div className="text-start ml-20 ">
+                                    <h2 className="text-3xl">Name : {toyota.name}</h2>
+                                    <h2 className="text-xl">Type : {toyota.type}</h2>
+                                    <h2>Price : $ {toyota.price}</h2>
+                                    <p>Rating :  {toyota.rating} / 10 </p>
+                                    <p>id : {toyota._id}</p>
+                                </div>
+                                <div className="flex flex-col gap-8 mr-20 mt-4">
+                                    <Link to={`/details/${toyota.name}`}><button className="btn btn-accent">Details</button></Link>
+                                    <button className=" btn btn-primary">Update</button>
+                                </div>
+                            </div>
                         </div>
-                        <div className="flex flex-col gap-8 mr-20 mt-4">
-                        <Link to={`/details/${toyotas.name}`}><button className="btn btn-accent">Details</button></Link>
-                            <button className=" btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
-                    <img className="mx-auto" src={toyotas[1].image} alt="" />
+                    )
+                }
 
-                    <div className="flex items-center justify-between mt-8">
-                        <div className="text-start ml-20 ">
-                            <h2 className="text-3xl">Name : {toyotas[1].name}</h2>
-                            <h2 className="text-xl">Type : {toyotas[1].type}</h2>
-                            <h2>Price : $ {toyotas[1].price}</h2>
-                            <p>Rating :  {toyotas[1].rating} / 10 </p>
-                        </div>
-                        <div className="flex flex-col gap-8 mr-20 mt-4">
-                            <button className="btn btn-accent">Details</button>
-                            <button className=" btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-
-                <div className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
-                    <img className="mx-auto" src={toyotas[3].image} alt="" />
-
-                    <div className="flex items-center justify-between mt-8">
-                        <div className="text-start ml-20 ">
-                            <h2 className="text-3xl">Name : {toyotas[3].name}</h2>
-                            <h2 className="text-xl">Type : {toyotas[3].type}</h2>
-                            <h2>Price : $ {toyotas[3].price}</h2>
-                            <p>Rating :  {toyotas[3].rating} / 10 </p>
-                        </div>
-                        <div className="flex flex-col gap-8 mr-20 mt-4">
-                            <button className="btn btn-accent">Details</button>
-                            <button className=" btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
-                    <img className="mx-auto" src={toyotas[0].image} alt="" />
-
-                    <div className="flex items-center justify-between mt-8">
-                        <div className="text-start ml-20 ">
-                            <h2 className="text-3xl">Name : {toyotas[0].name}</h2>
-                            <h2 className="text-xl">Type : {toyotas[0].type}</h2>
-                            <h2>Price : $ {toyotas[0].price}</h2>
-                            <p>Rating :  {toyotas[0].rating} / 10 </p>
-                        </div>
-                        <div className="flex flex-col gap-8 mr-20 mt-4">
-                            <button className="btn btn-accent">Details</button>
-                            <button className=" btn btn-primary">Update</button>
-                        </div>
-                    </div>
-                </div>
             </div>
 
 
