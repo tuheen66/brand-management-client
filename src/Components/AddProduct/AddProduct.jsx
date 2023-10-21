@@ -29,12 +29,14 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                Swal.fire({
-                    title: 'Success!',
-                    text: 'Product added Successfully',
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
             })
 
     }

@@ -51,7 +51,9 @@ const Ford = () => {
                                     <Link to={`/fordDetails/${ford.name}`}>
                                         <button className="btn btn-accent">Details</button>
                                     </Link>
-                                    <button className=" btn btn-primary">Update</button>
+                                    <Link to={`/updateProduct/${ford._id}`}>
+                                        <button className=" btn btn-primary">Update</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

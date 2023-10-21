@@ -52,7 +52,9 @@ const Honda = () => {
                                     <Link to={`/hondaDetails/${honda.name}`}>
                                         <button className="btn btn-accent">Details</button>
                                     </Link>
-                                    <button className=" btn btn-primary">Update</button>
+                                    <Link to={`/updateProduct/${honda._id}`}>
+                                        <button className=" btn btn-primary">Update</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

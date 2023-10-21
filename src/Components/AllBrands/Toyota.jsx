@@ -6,7 +6,7 @@ const Toyota = () => {
 
     const toyotasProduct = useLoaderData();
 
-      const toyotas = toyotasProduct.filter(toyotaProduct => toyotaProduct.brandName == "Toyota")
+    const toyotas = toyotasProduct.filter(toyotaProduct => toyotaProduct.brandName == "Toyota")
 
 
     return (
@@ -54,7 +54,10 @@ const Toyota = () => {
                                 </div>
                                 <div className="flex flex-col gap-8 mr-20 mt-4">
                                     <Link to={`/toyotaDetails/${toyota.name}`}><button className="btn btn-accent">Details</button></Link>
-                                    <button className=" btn btn-primary">Update</button>
+                                    
+                                    <Link to={`/updateProduct/${toyota._id}`}>
+                                        <button className=" btn btn-primary">Update</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

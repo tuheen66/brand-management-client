@@ -27,7 +27,7 @@ import ToyotaDetails from './Components/Alldetails/ToyotaDetails.jsx';
 import AudiDetails from './Components/Alldetails/AudiDetails.jsx';
 import FordDetails from './Components/Alldetails/FordDetails.jsx';
 import HondaDetails from './Components/Alldetails/HondaDetails.jsx';
-import ToyotaUpdates from './Components/AllUpdates/ToyotaUpdates.jsx';
+
 
 
 
@@ -121,10 +121,7 @@ const router = createBrowserRouter([
         element: <HondaDetails></HondaDetails>,
         loader: () => fetch('http://localhost:5000/products')
       },
-      {
-        path: '/toyotaUpdate',
-        element: <ToyotaUpdates></ToyotaUpdates>
-      }
+     
 
 
 
