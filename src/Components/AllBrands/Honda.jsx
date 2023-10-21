@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const Honda = () => {
@@ -49,7 +49,9 @@ const Honda = () => {
                                     <p>Rating :  {honda.rating} / 10 </p>
                                 </div>
                                 <div className="flex flex-col gap-8 mr-20 mt-4">
-                                    <button className="btn btn-accent">Details</button>
+                                    <Link to={`/hondaDetails/${honda.name}`}>
+                                        <button className="btn btn-accent">Details</button>
+                                    </Link>
                                     <button className=" btn btn-primary">Update</button>
                                 </div>
                             </div>

@@ -22,7 +22,12 @@ import Toyota from './Components/AllBrands/Toyota.jsx';
 import Ford from './Components/AllBrands/Ford.jsx';
 import Honda from './Components/AllBrands/Honda.jsx';
 import Tesla from './Components/AllBrands/Tesla.jsx';
-import BrandDetails from './Components/AllBrands/BrandDetails.jsx';
+import BmwDetails from './Components/Alldetails/BmwDetails.jsx';
+import ToyotaDetails from './Components/Alldetails/ToyotaDetails.jsx';
+import AudiDetails from './Components/Alldetails/AudiDetails.jsx';
+import FordDetails from './Components/Alldetails/FordDetails.jsx';
+import HondaDetails from './Components/Alldetails/HondaDetails.jsx';
+import ToyotaUpdates from './Components/AllUpdates/ToyotaUpdates.jsx';
 
 
 
@@ -90,10 +95,35 @@ const router = createBrowserRouter([
         element: <Tesla></Tesla>,
         loader: () => fetch('http://localhost:5000/products')
       },
+
       {
-        path: '/details/:id',
-        element: <BrandDetails></BrandDetails>,
-        loader: () => fetch('http://localhost:5000/products/')
+        path: '/bmwDetails/:name',
+        element: <BmwDetails></BmwDetails>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/toyotaDetails/:name',
+        element: <ToyotaDetails></ToyotaDetails>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/audiDetails/:name',
+        element: <AudiDetails></AudiDetails>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/fordDetails/:name',
+        element: <FordDetails></FordDetails>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/hondaDetails/:name',
+        element: <HondaDetails></HondaDetails>,
+        loader: () => fetch('http://localhost:5000/products')
+      },
+      {
+        path: '/toyotaUpdate',
+        element: <ToyotaUpdates></ToyotaUpdates>
       }
 
 

@@ -2,9 +2,12 @@ import { Link, useLoaderData } from "react-router-dom";
 
 
 const Toyota = () => {
+
+
     const toyotasProduct = useLoaderData();
 
-    const toyotas = toyotasProduct.filter(toyotaProduct => toyotaProduct.brandName == "Toyota")
+      const toyotas = toyotasProduct.filter(toyotaProduct => toyotaProduct.brandName == "Toyota")
+
 
     return (
         <div>
@@ -50,7 +53,7 @@ const Toyota = () => {
                                     <p>id : {toyota._id}</p>
                                 </div>
                                 <div className="flex flex-col gap-8 mr-20 mt-4">
-                                    <Link to={`/details/${toyota.name}`}><button className="btn btn-accent">Details</button></Link>
+                                    <Link to={`/toyotaDetails/${toyota.name}`}><button className="btn btn-accent">Details</button></Link>
                                     <button className=" btn btn-primary">Update</button>
                                 </div>
                             </div>

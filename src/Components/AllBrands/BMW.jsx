@@ -46,10 +46,11 @@ const BMW = () => {
                                     <h2 className="text-xl">Type : {bmw.type}</h2>
                                     <h2>Price : $ {bmw.price}</h2>
                                     <p>Rating :  {bmw.rating} / 10 </p>
+                                    <p>{bmw._id}</p>
                                 </div>
                                 <div className="flex flex-col gap-8 mr-20 mt-4">
 
-                                    <Link to={`/details/${bmw._id}`}><button className="btn btn-accent">Details</button></Link>
+                                    <Link to={`/bmwDetails/${bmw.name}`}><button className="btn btn-accent">Details</button></Link>
 
                                     <button className=" btn btn-primary">Update</button>
 
