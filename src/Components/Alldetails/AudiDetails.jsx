@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const AudiDetails = () => {
@@ -27,6 +28,15 @@ const AudiDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Added product to cart Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
             })
     }
 
