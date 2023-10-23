@@ -37,17 +37,17 @@ const Ford = () => {
             <div>
                 {
                     fords.map(ford =>
-                        <div key={ford._id} className="w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
+                        <div key={ford._id} className="md:w-4/5 mx-auto my-12 bg-gray-300 py-8 ">
                             <img className="mx-auto" src={ford.image} alt="" />
 
-                            <div className="flex items-center justify-between mt-8">
-                                <div className="text-start ml-20 ">
+                            <div className="flex flex-col md:flex-row justify-center items-center md:justify-between mt-8">
+                                <div className="text-start md:ml-20 ">
                                     <h2 className="text-3xl">Name : {ford.name}</h2>
                                     <h2 className="text-xl">Type : {ford.type}</h2>
                                     <h2>Price : $ {ford.price}</h2>
                                     <p>Rating :  {ford.rating} / 10 </p>
                                 </div>
-                                <div className="flex flex-col gap-8 mr-20 mt-4">
+                                <div className="flex flex-row md:flex-col  gap-8 md:mr-20 mt-4">
                                     <Link to={`/fordDetails/${ford.name}`}>
                                         <button className="btn btn-accent">Details</button>
                                     </Link>

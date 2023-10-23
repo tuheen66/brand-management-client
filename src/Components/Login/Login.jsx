@@ -1,13 +1,15 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from 'sweetalert2'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
 
     const { googleSignIn, signIn } = useContext(AuthContext);
     const [error, setError] = useState('')
+    const navigate = useNavigate()
+    const location = useLocation()
 
     const handleSignIn = (event) => {
         event.preventDefault();
@@ -22,6 +24,10 @@ const Login = () => {
         signIn(email, password)
             .then((res) => {
                 console.log(res.user)
+                event.target.reset()
+
+                navigate(location?.state ? location.state : ('/'))
+
                 Swal.fire({
                     title: 'Success!',
                     text: 'you have logged in successfully',
@@ -39,7 +45,16 @@ const Login = () => {
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(res => {
-                console.log(res.user)
+                console.log(res.user);
+
+                navigate(location?.state ? location.state : ('/'))
+                
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'you have logged in successfully',
+                    icon: 'info',
+                    confirmButtonText: 'Cool'
+                })
             })
             .catch(error => {
                 console.error(error)
@@ -48,9 +63,8 @@ const Login = () => {
 
 
     return (
-        <div>
-            <h2>Login here</h2>
-            <div className="hero min-h-screen bg-base-200">
+        <div className="w-10/12 mx-auto">
+            <div className="hero min-h-screen ">
                 <div className="hero-content flex-col ">
                     <div className="text-center lg:text-left">
                         <h1 className="text-5xl font-bold">Log In!</h1>

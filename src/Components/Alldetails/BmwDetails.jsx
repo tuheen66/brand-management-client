@@ -42,12 +42,12 @@ const BmwDetails = () => {
 
     return (
         <div>
-            <div className="mx-auto w-10/12 mb-8">
+            <div className="mx-auto md:w-10/12 mb-8">
 
                 <img id="image" src={product.image} alt="" />
             </div>
             <div>
-                <div className="text-start ml-20 mb-12 ">
+                <div className="text-start md:ml-20 mb-12 ">
                     <h2 className="text-4xl font-bold">Brand Name: <span id="brand" >{product.brandName}</span> </h2>
                     <h2 className="text-3xl">Name : <span id="name">{product.name}</span> </h2>
                     <h2 className="text-xl">Type : <span id="type" >{product.type}</span> </h2>

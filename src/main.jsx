@@ -27,6 +27,7 @@ import ToyotaDetails from './Components/Alldetails/ToyotaDetails.jsx';
 import AudiDetails from './Components/Alldetails/AudiDetails.jsx';
 import FordDetails from './Components/Alldetails/FordDetails.jsx';
 import HondaDetails from './Components/Alldetails/HondaDetails.jsx';
+import PrivateRout from './PrivateRout/PrivateRout.jsx';
 
 
 
@@ -44,17 +45,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/addProduct',
-        element: <AddProduct ></AddProduct>
+        element: <PrivateRout><AddProduct ></AddProduct></PrivateRout>
       },
       {
         path: '/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: <PrivateRout><UpdateProduct></UpdateProduct></PrivateRout>,
         loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
       },
       {
         path: ('/myCart'),
-        element: <MyCart></MyCart>,
-        loader:()=>fetch('http://localhost:5000/products/cart')
+        element: <PrivateRout><MyCart></MyCart></PrivateRout>,
+        loader: () => fetch('http://localhost:5000/products/cart')
       },
       {
         path: ('/login'),
@@ -99,30 +100,30 @@ const router = createBrowserRouter([
 
       {
         path: '/bmwDetails/:name',
-        element: <BmwDetails></BmwDetails>,
+        element: <PrivateRout><BmwDetails></BmwDetails></PrivateRout>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: '/toyotaDetails/:name',
-        element: <ToyotaDetails></ToyotaDetails>,
+        element: <PrivateRout><ToyotaDetails></ToyotaDetails></PrivateRout>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: '/audiDetails/:name',
-        element: <AudiDetails></AudiDetails>,
+        element: <PrivateRout><AudiDetails></AudiDetails></PrivateRout>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: '/fordDetails/:name',
-        element: <FordDetails></FordDetails>,
+        element: <PrivateRout><FordDetails></FordDetails></PrivateRout>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: '/hondaDetails/:name',
-        element: <HondaDetails></HondaDetails>,
+        element: <PrivateRout><HondaDetails></HondaDetails></PrivateRout>,
         loader: () => fetch('http://localhost:5000/products')
       },
-     
+
     ]
   },
 ]);

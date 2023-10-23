@@ -43,7 +43,7 @@ const AddProduct = () => {
 
 
     return (
-        <div className="my-12 w-4/5 mx-auto bg-gray-400 p-8">
+        <div className="my-12  md:w-4/5 mx-auto bg-gray-400 p-8">
             <h2 className="text-center font-semibold text-3xl my-8">Add a Product</h2>
             <form onSubmit={handleAddProduct}>
                 {/* image row */}
@@ -64,8 +64,8 @@ const AddProduct = () => {
                 </div>
 
                 {/*  name and brand name row */}
-                <div className="md:flex gap-8 mb-8 justify-center ">
-                    <div className="form-control w-1/2">
+                <div className=" md:flex  gap-8 mb-8 justify-center ">
+                    <div className="form-control w-full md:w-1/2">
                         <label className="label">
                             <span className="label-text">Name</span>
                         </label>
@@ -73,12 +73,12 @@ const AddProduct = () => {
 
                             <input type="text" placeholder="Name"
                                 name="name"
-                                className="input border  
+                                className="input border 
                                 input-bordered w-full" />
                         </label>
                     </div>
 
-                    <div className="form-control w-1/2">
+                    <div className="form-control md:w-1/2">
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
@@ -86,7 +86,7 @@ const AddProduct = () => {
 
                             <input type="text" placeholder="Brand name"
                                 name="brandName"
-                                className="input input-bordered w-full" />
+                                className="input input-bordered w-full md:w-full" />
                         </label>
                     </div>
 
@@ -94,7 +94,7 @@ const AddProduct = () => {
 
                 {/* form type and price row */}
                 <div className="md:flex gap-8 mb-8 justify-center ">
-                    <div className="form-control w-1/2">
+                    <div className="form-control w-full  md:w-1/2">
                         <label className="label">
                             <span className="label-text">Type </span>
                         </label>
@@ -107,7 +107,7 @@ const AddProduct = () => {
                         </label>
                     </div>
 
-                    <div className="form-control w-1/2">
+                    <div className="form-control w-full md:w-1/2">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
@@ -138,23 +138,24 @@ const AddProduct = () => {
                 </div>
 
                 {/* rating and add product button row */}
-                <div className="flex justify-between">
-                    <div className="md:flex gap-8 mb-8 justify-center w-1/2 ">
+                <div className=" justify-between">
+
+                    <div className="gap-8 mb-8 justify-center w-full  ">
                         <div className="form-control w-full">
                             <label className="label">
-                                <span className="label-text">Rating : Low : 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 : High</span>
+                                <span className="label-text w-full">Rating: <br /> Low: 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9 - 10 :High</span>
                             </label>
                             <label className="input-group">
 
                                 <input type="text" placeholder="rating"
                                     name="rating"
-                                    className="input input-bordered w-1/3" />
+                                    className="input input-bordered  w-full md:w-1/3" />
                             </label>
                         </div>
 
                     </div>
 
-                    <input className=" mt-8 justify-end btn btn-accent" type="submit" value="Add Product" />
+                    <input className="text-center mt-8 md:justify-end btn btn-accent" type="submit" value="Add Product" />
                 </div>
 
             </form>
