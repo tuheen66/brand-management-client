@@ -23,7 +23,7 @@ const UpdateProduct = () => {
 
         // sending data to server
 
-        fetch(`http://localhost:5000/products/${product._id}`, {
+        fetch(`https://brand-management-server.vercel.app/products/${product._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -33,7 +33,7 @@ const UpdateProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-               
+
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         title: 'Success!',
@@ -41,7 +41,7 @@ const UpdateProduct = () => {
                         icon: 'success',
                         confirmButtonText: 'Cool'
                     })
-                    
+
                 }
             })
 

@@ -50,12 +50,12 @@ const router = createBrowserRouter([
       {
         path: '/updateProduct/:id',
         element: <PrivateRout><UpdateProduct></UpdateProduct></PrivateRout>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-management-server.vercel.app/products/${params.id}`)
       },
       {
         path: ('/myCart'),
         element: <PrivateRout><MyCart></MyCart></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products/cart')
+        loader: () => fetch('https://brand-management-server.vercel.app/products/cart')
       },
       {
         path: ('/login'),
@@ -69,59 +69,59 @@ const router = createBrowserRouter([
       {
         path: '/BMW',
         element: <BMW></BMW>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
 
       {
         path: '/Audi',
         element: <Audi></Audi>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/Toyota',
         element: <Toyota></Toyota>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/Ford',
         element: <Ford></Ford>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/Honda',
         element: <Honda></Honda>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/Tesla',
         element: <Tesla></Tesla>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
 
       {
         path: '/bmwDetails/:name',
         element: <PrivateRout><BmwDetails></BmwDetails></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/toyotaDetails/:name',
         element: <PrivateRout><ToyotaDetails></ToyotaDetails></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/audiDetails/:name',
         element: <PrivateRout><AudiDetails></AudiDetails></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/fordDetails/:name',
         element: <PrivateRout><FordDetails></FordDetails></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
       {
         path: '/hondaDetails/:name',
         element: <PrivateRout><HondaDetails></HondaDetails></PrivateRout>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-management-server.vercel.app/products')
       },
 
     ]

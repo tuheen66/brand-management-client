@@ -10,7 +10,7 @@ const Home = () => {
     const products = useLoaderData()
 
     const loadCars = async () => {
-        const cars = await fetch('http://localhost:5000/products')
+        const cars = await fetch('https://brand-management-server.vercel.app/products')
         const data = await cars.json()
         console.log(data)
     }

@@ -7,3 +7,5 @@ Some important features of the website"
 4. On clicking the update button will take you to the update form where ypu can update model information.
 5. Add product page will give you the opportunity to add new products.
 6. All the functions above can be done when user is logged in to the page, other wise it will redirect you to login page.
+
+Firebase Live site Link: https://brand-management-client.web.app/

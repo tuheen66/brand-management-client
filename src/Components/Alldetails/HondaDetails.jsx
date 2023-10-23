@@ -16,7 +16,7 @@ const HondaDetails = () => {
         const cart = { image, brand, name, type, price, }
         console.log(cart)
 
-        fetch('http://localhost:5000/products/cart', {
+        fetch('https://brand-management-server.vercel.app/products/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -17,7 +17,7 @@ const AudiDetails = () => {
         const cart = { image, brand, name, type, price, }
         console.log(cart)
 
-        fetch('http://localhost:5000/products/cart', {
+        fetch('https://brand-management-server.vercel.app/products/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -28,7 +28,7 @@ const AudiDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                
+
                 if (data.insertedId) {
                     Swal.fire({
                         title: 'Success!',

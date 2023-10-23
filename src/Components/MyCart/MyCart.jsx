@@ -11,7 +11,7 @@ const MyCart = () => {
 
     const handleRemove = _id => {
         console.log(_id)
-        fetch(`http://localhost:5000/products/cart/${_id}`, {
+        fetch(`https://brand-management-server.vercel.app/products/cart/${_id}`, {
             method: 'DELETE',
 
         })
@@ -48,7 +48,7 @@ const MyCart = () => {
                             <h2 className="text-3xl">Name: {cart.name}</h2>
                             <p className="text-2xl"> Type: {cart.type}</p>
                             <p className="text-2xl font-bold"> Price: {cart.price}</p>
-                            
+
 
                             <button onClick={() => handleRemove(cart._id)} className=" btn btn-sm btn-primary">Remove</button>
 
